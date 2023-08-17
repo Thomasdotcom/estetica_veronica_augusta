@@ -1,3 +1,6 @@
+alert('Site em construção, o modelo é apenas um protótipo')
+alert('Versão 1.0.2')
+
 setInterval(function() {
     const show = document.querySelector('span[data-show]')
     const next = show.nextElementSibling || document.querySelector('span:first-child')
