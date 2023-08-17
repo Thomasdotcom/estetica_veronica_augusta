@@ -1,0 +1,282 @@
+/* PATTERN */
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,1;0,100;0,400;0,600;1,1;1,100;1,500;1,700&display=swap');
+
+* {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+html {
+    background-color: #fff;
+    color: #000;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Ysabeau Office', sans-serif;
+    font-size: 1.6rem;
+}
+
+header {
+    padding: 2rem 4.5rem 1rem 4.5rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: rgb(151, 73, 147) solid 1px;
+}
+
+section {
+    padding: 4.5rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* MAIN CONTENT */
+
+.wallpaper-main {
+    background-image: url('../img/clinica.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 200vw;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.wallpaper-content {
+    margin: 0rem 13rem;
+    padding: 2rem 4rem;
+    background-color: rgb(201, 147, 104, 50%);
+    /* background-color: rgb(131, 148, 202, 50%);
+    background-color: rgb(151, 73, 147, 55%); */
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0.5rem 0.5rem;
+    height: auto;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+h2 {
+    width: 40vw;
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+}
+
+.mask {
+    font-size: 8rem;
+    height: 10rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: var(--offset);
+}
+
+.mask span {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 12rem;
+    padding-bottom: var(--offset);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.mask span[data-show] {
+    transform: translateY(-100%);
+    transition: .6s transform ease-in-out;
+}
+
+.mask span:nth-child(1) {
+    background-image: linear-gradient(
+        45deg, #0ecffe 50%, #07a6f1
+    );
+}
+
+.mask span:nth-child(2) {
+    background-image: linear-gradient(
+        45deg, #18e198 50%, #0ec15d
+    );
+}
+
+.mask span:nth-child(3) {
+    background-image: linear-gradient(
+        45deg, #8a7cfb 50%, #663e9c
+    );
+}
+
+.mask span:nth-child(4) {
+    background-image: linear-gradient(
+        45deg, #8a7cfb 50%, #663e9c
+    );
+}
+
+.header-logo {
+    width: 8rem;
+    height: auto;
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav h3 a {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    text-transform: uppercase;
+    color: rgb(151, 73, 147);
+}
+
+.underline {
+    font-size: 2rem;
+    color: #242424;
+    position: relative;
+    padding-bottom: 8px;
+    margin: 8px 0px;
+}
+
+.underline::before,
+.underline::after {
+    content: '';
+    background-color: rgb(151, 73, 147);
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+}
+
+.header-nav--effect::before {
+    right: 50%;
+}
+
+.header-nav--effect::after {
+    left: 50%;
+}
+
+.header-nav--effect::before,
+.header-nav--effect::after {
+    animation: 
+        add-underline--from-middle 0.5s 0.1s both;
+}
+
+.header-nav--effect:not(:hover)::before,
+.header-nav--effect:not(:hover)::after {
+    animation: 
+        remove-underline--from-middle 0.5s 0.1s both;
+}
+
+@keyframes add-underline--from-middle {
+    from { width: 0%; }
+    to { width: 40%; }
+}
+
+@keyframes remove-underline--from-middle {
+    from { width: 40%; }
+    to { width: 0%; }
+}
+
+.header-icon {
+    width: 3rem;
+    height: auto;
+}
+
+/* MAIN CONTENT INFORMATION */
+.main-tratments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 52px 0px;
+    gap: 100px;
+}
+
+.main-tratments-capilar,
+.main-tratments-corporal,
+.main-tratments-facial,
+.main-tratments-auriculoterapia,
+.main-tratments-aromaterapia {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.main-tratments-content-box {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.main-tratments-image {
+    width: 45rem;
+    height: 45rem;
+}
+
+.main-tratments-title {
+    text-transform: uppercase;
+    
+}
+
+.main-tratments-text {
+    font-size: 20px;
+}
+
+.main-tratments-button {
+    width: 120px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+    background-color: rgb(151, 73, 147);
+    padding: 20px 0px;
+    color: aliceblue;
+}
+
+.footer-left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-left-side-image {
+    width: 30rem;
+}
+
+.footer-left-side-description {
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.footer-right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right-side-social-networks {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-right-side-location {
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
